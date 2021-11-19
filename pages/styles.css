@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --fade-in-delay: 4s;
-}
+:root{scroll-behavior:smooth;}
 
 .header {
     background-image: url("/img/bg-header.jpg");
@@ -15,7 +13,31 @@
     font-family: 'Satisfy', cursive;
 }
 
-.fade-in {
+.scroll-top {
+    position: absolute;
+    top: 120vh;
+    bottom: 2rem;
+    right: 1rem;
+  }
+  
+  .scroll-top__link {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 90vh;
+    @apply bg-yellow-400 font-extrabold text-4xl bg-opacity-70 rounded-lg px-4 py-1 text-purple-700;
+  }
+
+
+.fade-in-1s {
+    --fade-in-delay: 1s;
+    animation: fadein var(--fade-in-delay);
+    -moz-animation: fadein var(--fade-in-delay); /* Firefox */
+    -webkit-animation: fadein var(--fade-in-delay); /* Safari and Chrome */
+    -o-animation: fadein var(--fade-in-delay); /* Opera */
+}
+
+.fade-in-4s {
+    --fade-in-delay: 4s;
     animation: fadein var(--fade-in-delay);
     -moz-animation: fadein var(--fade-in-delay); /* Firefox */
     -webkit-animation: fadein var(--fade-in-delay); /* Safari and Chrome */
